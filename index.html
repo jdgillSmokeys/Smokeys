@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Your Store</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            text-align: center;
+            background-color: white;
+            padding: 50px;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+        }
+
+        h1 {
+            color: #660eae;
+            margin-bottom: 20px;
+        }
+
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            font-size: 16px;
+            color: #333;
+        }
+
+        button {
+            background-color: #660eae;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #550c8e;
+        }
+    </style>
+    <script type="text/javascript">
+        function redirectToStore() {
+            var location = document.getElementById("locationDropdown").value;
+            if (location) {
+                window.location.href = location;
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Select Your Store</h1>
+        <select id="locationDropdown">
+            <option value="">Select a location</option>
+            <option value="https://on-shop.getsmokeys.com/smokeys-beaches/">Smokey's Beaches</option>
+            <option value="https://shop.getsmokeys.com/menu/smokeys-capilano/">Smokey's Capilano</option>
+            <option value="https://shop.getsmokeys.com/menu/smokeys-mill-creek/">Smokey's Mill Creek</option>
+            <option value="https://shop.getsmokeys.com/menu/smokeys-walker-lake/">Smokey's Walker Lake</option>
+        </select>
+        <button onclick="redirectToStore()">Go to Store</button>
+    </div>
+</body>
+</html>
